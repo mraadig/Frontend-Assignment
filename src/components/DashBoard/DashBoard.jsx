@@ -35,7 +35,7 @@ const DashBoard = () => {
               className="dashCardContainer"
               style={{ width: `${cardWidthPercentage}%` }}
             >
-              <div className="dashCardHeading flex-sb" >
+              <div className="dashCardHeading flex-sb"  >
                 <div className="leftView" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
                   {user ? (
                     <div
@@ -66,6 +66,7 @@ const DashBoard = () => {
                       className="cardTitle"
                       style={{
                         width: "15px",
+                        alignItems:"center",
                         height: "15px",
                         display: "inline-block",
                         fontWeight: 200,
@@ -175,13 +176,14 @@ const DashBoard = () => {
                     height: "13px",
                     display: "inline-block",
                     fontWeight: 200,
+                    alignItems: "center",
                   }}
                 >
                   <BsFillCheckCircleFill style={{ color: "blue" }} />
                 </div>{" "}
                 <span style={{ fontSize: "13px", fontWeight: "lighter" }}>Done</span> <span style={{ fontSize: "13px", color: "#8F9997" }}>0</span>
               </div>
-              <div className="rightView">
+              <div className="rightView" style={{display:"flex", alignItems: "center",}}>
                 <AiOutlinePlus />{" "}
                 <span style={{ letterSpacing: "2px" }}>...</span>
               </div>

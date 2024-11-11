@@ -60,22 +60,22 @@ const Card = ({ id, title, tag, status, priority, userName }) => {
         )}
       </div>
       <div className="cardTitle" style={{ fontWeight: 200 }}>
-  {!isStatus && (
-    <>
-      {status === "Backlog" ? (
-        <BiLoader style={{ fontSize: "14px", color: "#000", verticalAlign: "middle" }} />
-      ) : status === "Todo" ? (
-        <FaRegCircle style={{ fontSize: "14px", color: "#ddeded", verticalAlign: "middle" }} />
-      ) : status === "In progress" ? (
-        <BiAdjust style={{ fontSize: "14px", color: "#f2d750", verticalAlign: "middle" }} />
-      ) : status === "Done" ? (
-        <BsCheckCircleFill style={{ fontSize: "14px", color: "#28a745", verticalAlign: "middle" }} />
-      ) : (
-        <IoMdCloseCircleOutline style={{ fontSize: "14px", color: "#ff0000", verticalAlign: "middle" }} />
-      )}
-      <span style={{ marginLeft: "5px", verticalAlign: "middle" }}>{title}</span>
-    </>
-  )}
+      {!isStatus && (
+  <>
+    {status === "Backlog" ? (
+      <BiLoader style={{ fontSize: "14px", color: "#000", verticalAlign: "middle" }} />
+    ) : status === "Todo" ? (
+      <FaRegCircle style={{ fontSize: "14px", color: "#ddeded", verticalAlign: "middle" }} />
+    ) : status === "In progress" ? (
+      <BiAdjust style={{ fontSize: "14px", color: "#f2d750", verticalAlign: "middle" }} />
+    ) : status === "Done" ? (
+      <BsCheckCircleFill style={{ fontSize: "14px", color: "#28a745", verticalAlign: "middle" }} />
+    ) : (
+      <IoMdCloseCircleOutline style={{ fontSize: "14px", color: "#ff0000", verticalAlign: "middle" }} />
+    )}
+    
+  </>
+)}<span style={{ marginLeft: "5px", verticalAlign: "middle" }}>{title}</span>
 </div>
       <div className="cardTags">
         {!isPriority ? (
